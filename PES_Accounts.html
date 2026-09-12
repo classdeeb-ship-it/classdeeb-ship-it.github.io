@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PES Accounts | بيع حسابات eFootball</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #0b0f19;
+            color: white;
+        }
+
+        /* NAVBAR */
+
+        nav {
+            background: #111827;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 8%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #222;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            color: #00e5ff;
+        }
+
+        .logo span {
+            color: #ffffff;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #00e5ff;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 50px 20px;
+
+            background:
+                linear-gradient(rgba(5,10,20,0.8),
+                rgba(5,10,20,0.95));
+        }
+
+        .hero h1 {
+            font-size: 50px;
+            margin-bottom: 20px;
+            color: #00e5ff;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: #cccccc;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #00c853;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            background: #00a844;
+        }
+
+        /* ACCOUNTS */
+
+        .accounts {
+            padding: 70px 8%;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 35px;
+            margin-bottom: 15px;
+            color: #00e5ff;
+        }
+
+        .section-text {
+            color: #aaa;
+            margin-bottom: 40px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: #151b29;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: 0.3s;
+            border: 1px solid #222b3d;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0,229,255,0.2);
+        }
+
+        .card img {
+            width: 100%;
+            height: 230px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        .card p {
+            color: #aaa;
+            margin-bottom: 15px;
+            line-height: 1.7;
+        }
+
+        .price {
+            color: #00e676;
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .buy-btn {
+            display: block;
+            background: #00e5ff;
+            color: #071018;
+            padding: 12px;
+            border-radius: 7px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .buy-btn:hover {
+            background: white;
+        }
+
+        /* WHY US */
+
+        .features {
+            background: #111827;
+            padding: 70px 8%;
+            text-align: center;
+        }
+
+        .feature-boxes {
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .feature {
+            background: #182133;
+            padding: 30px;
+            border-radius: 12px;
+        }
+
+        .feature h3 {
+            color: #00e5ff;
+            margin-bottom: 10px;
+        }
+
+        .feature p {
+            color: #aaa;
+        }
+
+        /* CONTACT */
+
+        .contact {
+            padding: 70px 20px;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 35px;
+            color: #00e5ff;
+            margin-bottom: 20px;
+        }
+
+        .contact p {
+            color: #aaa;
+            margin-bottom: 25px;
+            font-size: 18px;
+        }
+
+        .phone {
+            font-size: 25px;
+            font-weight: bold;
+            color: #00e676;
+            margin-bottom: 25px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #05070c;
+            text-align: center;
+            padding: 25px;
+            color: #777;
+        }
+
+        /* MOBILE */
+
+        @media(max-width: 600px) {
+
+            nav {
+                padding: 15px;
+            }
+
+            nav ul {
+                gap: 12px;
+                font-size: 13px;
+            }
+
+            .hero h1 {
+                font-size: 35px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+
+    <nav>
+
+        <div class="logo">
+            PES <span>ACCOUNTS</span>
+        </div>
+
+        <ul>
+            <li><a href="#home">الرئيسية</a></li>
+            <li><a href="#accounts">الحسابات</a></li>
+            <li><a href="#contact">تواصل</a></li>
+        </ul>
+
+    </nav>
+
+
+    <!-- HERO -->
+
+    <section class="hero" id="home">
+
+        <div>
+
+            <h1>بيع حسابات eFootball ⚽</h1>
+
+            <p>
+                اكتشف أفضل حسابات PES و eFootball
+                واختر الحساب المناسب لك
+            </p>
+
+            <a href="#accounts" class="btn">
+                مشاهدة الحسابات
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ACCOUNTS -->
+
+    <section class="accounts" id="accounts">
+
+        <h2 class="section-title">
+            حسابات متوفرة 🔥
+        </h2>
+
+        <p class="section-text">
+            اختر الحساب الذي يناسبك وتواصل معنا للشراء
+        </p>
+
+
+        <div class="cards">
+
+
+            <!-- ACCOUNT 1 -->
+
+            <div class="card">
+
+                <img src="https://ibb.co/0jBP1sFC"
+                     alt="حساب eFootball">
+
+                <div class="card-content">
+
+                    <h3>حساب eFootball مميز ⚽</h3>
+
+                    <p>
+                        حساب يحتوي على لاعبين مميزين
+                        وفريق قوي.
+                    </p>
+
+                    <div class="price">
+                        تواصل لمعرفة السعر
+                    </div>
+
+                    <a class="buy-btn"
+                       href="https://wa.me/212645483585?text=السلام عليكم، أريد شراء الحساب الأول">
+
+                        شراء عبر WhatsApp
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- ACCOUNT 2 -->
+
+            <div class="card">
+
+                <img src="https://ibb.co/svk5rpBJ"
+                     alt="حساب PES">
+
+                <div class="card-content">
+
+                    <h3>حساب PES قوي 🔥</h3>
+
+                    <p>
+                        فريق مميز ولاعبون أقوياء
+                        جاهزون للعب.
+                    </p>
+
+                    <div class="price">
+                        تواصل لمعرفة السعر
+                    </div>
+
+                    <a class="buy-btn"
+                       href="https://wa.me/212645483585?text=السلام عليكم، أريد شراء الحساب الثاني">
+
+                        شراء عبر WhatsApp
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- ACCOUNT 3 -->
+
+            <div class="card">
+
+                <img src="https://ibb.co/rRW1VHDd"
+                     alt="حساب eFootball">
+
+                <div class="card-content">
+
+                    <h3>حساب أسطوري ⭐</h3>
+
+                    <p>
+                        حساب يحتوي على مجموعة
+                        من اللاعبين المميزين.
+                    </p>
+
+                    <div class="price">
+                        تواصل لمعرفة السعر
+                    </div>
+
+                    <a class="buy-btn"
+                       href="https://wa.me/212645483585?text=السلام عليكم، أريد شراء الحساب الثالث">
+
+                        شراء عبر WhatsApp
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- FEATURES -->
+
+    <section class="features">
+
+        <h2 class="section-title">
+            لماذا تختارنا؟
+        </h2>
+
+
+        <div class="feature-boxes">
+
+
+            <div class="feature">
+
+                <h3>⚡ سرعة التواصل</h3>
+
+                <p>
+                    نتواصل معك بسرعة للإجابة عن استفساراتك.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <h3>🎮 حسابات متنوعة</h3>
+
+                <p>
+                    مجموعة مختلفة من الحسابات للاختيار بينها.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <h3>📱 تواصل مباشر</h3>
+
+                <p>
+                    يمكنك التواصل معنا مباشرة عبر WhatsApp.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section class="contact" id="contact">
+
+        <h2>تواصل معنا 📞</h2>
+
+        <p>
+            للاستفسار عن الحسابات والأسعار، تواصل معنا عبر WhatsApp
+        </p>
+
+        <div class="phone">
+            +212 645483585
+        </div>
+
+
+        <a href="https://wa.me/212645483585"
+           class="btn">
+
+            تواصل عبر WhatsApp 💬
+
+        </a>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        © 2026 PES ACCOUNTS - جميع الحقوق محفوظة
+
+    </footer>
+
+
+</body>
+</html>
